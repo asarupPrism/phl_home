@@ -15,7 +15,6 @@ const SubscribeSection = () => {
         <button className="mt-8 bg-[#E3F1FF] text-[#0A3556] font-medium text-2xl rounded-xl px-12 py-4 shadow-md transition hover:bg-[#cbe6ff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A3556]" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
           Subscribe
         </button>
-        <span className="text-white font-bold text-2xl mb-8" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>or</span>
         <h3 className="text-white font-bold text-3xl sm:text-4xl text-center mb-4" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
           <span className="font-bold">Order</span> a la carte
         </h3>
