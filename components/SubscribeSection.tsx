@@ -9,7 +9,7 @@ const SubscribeSection = () => {
       <div className="flex flex-col items-center w-full max-w-2xl">
         <p className="text-white text-lg sm:text-xl text-center mb-6" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
           We automatically send you your tests on-time<br />
-          and at the appropriate intervals so you don't<br />
+          and at the appropriate intervals so you don&apos;t<br />
           have to worry about it.
         </p>
         <button className="mt-8 bg-[#E3F1FF] text-[#0A3556] font-medium text-2xl rounded-xl px-12 py-4 shadow-md transition hover:bg-[#cbe6ff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A3556]" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
@@ -20,7 +20,7 @@ const SubscribeSection = () => {
           <span className="font-bold">Order</span> a la carte
         </h3>
         <p className="text-white text-lg sm:text-xl text-center mb-6" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
-          If you're looking for a one-off test, that's ok too.<br />
+          If you&apos;re looking for a one-off test, that&apos;s ok too.<br />
           We still send you the full range of personalized<br />
           insights & recommendations.
         </p>

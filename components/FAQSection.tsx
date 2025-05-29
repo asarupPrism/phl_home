@@ -8,7 +8,7 @@ const faqs = [
     a: "This ultimately depends on the test you are getting. Some tests require intervals of every 3 months, some once every year, or even our personal recommendation.",
   },
   {
-    q: "What if I don't know what to test for?",
+    q: "What if I don&apos;t know what to test for?",
     a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
@@ -38,7 +38,7 @@ const FAQSection = () => {
           {/* Left column */}
           <div className="w-full md:w-1/2 flex flex-col justify-start md:pr-16 mb-8 md:mb-0">
             <p className="text-white text-lg md:text-xl max-w-md" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
-              Have more questions? Our FAQ should answer of them! If not, don't hesitate to contact us – we'd love to hear from you!
+              Have more questions? Our FAQ should answer of them! If not, don&apos;t hesitate to contact us – we&apos;d love to hear from you!
             </p>
           </div>
           {/* Right column */}

@@ -87,7 +87,7 @@ const PricingSection = () => {
           </div>
           {/* Right Column: Features */}
           <div className="flex flex-col flex-1 self-stretch justify-center w-full md:w-[400px] h-full gap-12 md:gap-12 mt-0 md:mt-2">
-            {features.map((f, i) => (
+            {features.map((f, _i) => (
               <div key={f.title} className="flex flex-col text-left">
                 <span className="text-white font-bold text-xl md:text-2xl mb-2" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>{f.title}</span>
                 <p className="text-white text-lg md:text-xl" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>{f.desc}</p>

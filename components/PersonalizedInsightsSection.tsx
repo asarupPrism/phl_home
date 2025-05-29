@@ -36,7 +36,7 @@ const PersonalizedInsightsSection = () => {
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <span className="font-bold">Don't guess.</span> Let our <span className="font-bold">personalized insights</span> guide you to the best possible outcomes <span className="font-bold">based on the data.</span>
+        <span className="font-bold">Don&apos;t guess.</span> Let our <span className="font-bold">personalized insights</span> guide you to the best possible outcomes <span className="font-bold">based on the data.</span>
       </motion.p>
       {/* Animated Down arrow */}
       <motion.div

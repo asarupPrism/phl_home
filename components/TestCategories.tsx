@@ -64,7 +64,7 @@ const TestCategories = () => {
         Over 20+ Tests Available
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-5xl pt-8">
-        {categories.map((cat, i) => (
+        {categories.map((cat, _i) => (
           <div
             key={cat.label}
             className="flex flex-col items-center justify-center border border-white rounded-2xl py-10 px-4 h-56 bg-transparent transition hover:bg-white/5"
