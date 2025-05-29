@@ -3,7 +3,7 @@ import React from "react";
 const SubscribeSection = () => {
   return (
     <section className="w-full bg-[#0A3556] py-16 px-4 flex flex-col items-center justify-center">
-      <h2 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl text-center mb-8" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
+      <h2 className="text-white font-bold text-3xl sm:text-4xl text-center mb-8" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
         <span className="font-bold">Subscribe</span> and stay<br />on track
       </h2>
       <div className="flex flex-col items-center w-full max-w-2xl">
@@ -12,7 +12,8 @@ const SubscribeSection = () => {
           and at the appropriate intervals so you don&apos;t<br />
           have to worry about it.
         </p>
-        <button className="mt-8 bg-[#E3F1FF] text-[#0A3556] font-medium text-2xl rounded-xl px-12 py-4 shadow-md transition hover:bg-[#cbe6ff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A3556]" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
+        <div className="h-2" />
+        <button className="bg-[#E3F1FF] text-[#0A3556] font-medium text-2xl rounded-xl px-12 py-4 shadow-md transition hover:bg-[#cbe6ff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A3556] mb-12" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
           Subscribe
         </button>
         <h3 className="text-white font-bold text-3xl sm:text-4xl text-center mb-4" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
