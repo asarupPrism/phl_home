@@ -33,10 +33,22 @@ const testimonials = [
   },
 ];
 
+function useIsMobile(breakpoint = 640) {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < breakpoint);
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [breakpoint]);
+  return isMobile;
+}
+
 const CARD_WIDTH = 400; // px
 const CARD_HEIGHT = 200; // px
 const CARD_GAP = 32; // px
-const VISIBLE_CARDS = 2;
 const ANIMATION_DURATION = 10000; // ms per card
 const FADE_DURATION = 600; // ms
 
@@ -44,6 +56,8 @@ const TestimonialsSection = () => {
   const [index, setIndex] = useState(0);
   const [batch, setBatch] = useState(0);
   const [show, setShow] = useState(true);
+  const isMobile = useIsMobile();
+  const VISIBLE_CARDS = isMobile ? 1 : 2;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -57,11 +71,10 @@ const TestimonialsSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Get the two visible cards, wrapping around
-  const visible = [
-    testimonials[index],
-    testimonials[(index + 1) % testimonials.length],
-  ];
+  // Get the visible cards, wrapping around
+  const visible = Array.from({ length: VISIBLE_CARDS }, (_, i) =>
+    testimonials[(index + i) % testimonials.length]
+  );
 
   return (
     <section className="w-full bg-[#0A3556] py-16 px-4 flex flex-col items-center justify-center overflow-hidden">
@@ -70,7 +83,7 @@ const TestimonialsSection = () => {
         <span className="font-bold">thousands of others.</span>
       </h2>
       <div className="w-full flex justify-center items-center" style={{ minHeight: `${CARD_HEIGHT + 80}px` }}>
-        <div className="relative flex items-center" style={{ width: `${(CARD_WIDTH + CARD_GAP) * VISIBLE_CARDS - CARD_GAP}px`, height: `${CARD_HEIGHT}px` }}>
+        <div className="relative flex items-center" style={{ width: `${(CARD_WIDTH + CARD_GAP) * VISIBLE_CARDS - CARD_GAP}px`, height: `${CARD_HEIGHT}px`, maxWidth: "100vw" }}>
           <div className="flex gap-8 w-full h-full items-center justify-center">
             <AnimatePresence mode="wait">
               {show && visible.map((t, idx) => (

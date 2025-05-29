@@ -8,7 +8,7 @@ const faqs = [
     a: "This ultimately depends on the test you are getting. Some tests require intervals of every 3 months, some once every year, or even our personal recommendation.",
   },
   {
-    q: "What if I don&#39;t know what to test for?",
+    q: "What if I don't know what to test for?",
     a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {

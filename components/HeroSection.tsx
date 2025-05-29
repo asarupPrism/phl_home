@@ -9,7 +9,7 @@ const HeroSection = () => {
           Made Easy.
         </h1>
         <p className="text-white text-lg sm:text-xl md:text-2xl font-normal mb-0 max-w-2xl" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
-          Personalized at-home testing made easy by a world class<br className="hidden sm:inline" />
+          Personalized at-home testing made easy by a world class <br className="hidden sm:inline" />
           CLIA Certified Laboratory built by doctors.
         </p>
         <button
