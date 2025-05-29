@@ -1,5 +1,6 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import PromoPopup from "./PromoPopup";
 
 type PricingCardProps = {
   title: string;
@@ -56,9 +57,16 @@ const PricingCard = ({ title, price, sub, button, onClick, hovered, setHovered }
 const PricingSection = () => {
   const [hovered1, setHovered1] = useState(false);
   const [hovered2, setHovered2] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPopup(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="w-full bg-[#0A3556] py-16 px-4 md:px-8 flex flex-col items-center justify-center">
+      {showPopup && <PromoPopup onClose={() => setShowPopup(false)} />}
       <div className="w-full max-w-5xl">
         <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl text-left mb-10" style={{ fontFamily: 'var(--font-geist-sans), sans-serif' }}>
           Choose Your Option
